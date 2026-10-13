@@ -34,7 +34,7 @@ function App() {
           <p className="mt-4 text-3xl text-[#CB2957]">
             Seats: {seats} | Months: {months}
           </p>
-          <p className="mt-2 text-xl">Quote for YOUR NAME</p>
+          <p className="mt-2 text-xl">Quote for John Benedict Juson</p>
         </header>
 
         <div className="flex gap-4">
