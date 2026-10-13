@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Controls from "./Controls";
 import PlanCard from "./PlanCard";
 import Summary from "./Summary";
 
@@ -44,26 +45,11 @@ function PlanPicker() {
         <>
             <div className="flex items-end justify-between bg-[#000000] px-20 py-12 text-[#EEEEEE]">
                 <Summary seats={seats} months={months} />
-                <div className="flex gap-4">
-                    <button
-                        className="cursor-pointer rounded-lg bg-[#CB2957] px-8 py-3 text-xl font-bold text-[#EEEEEE]"
-                        onClick={handleAddSeat}
-                    >
-                        Add seat
-                    </button>
-                    <button
-                        className="cursor-pointer rounded-lg bg-[#EEEEEE] px-8 py-3 text-xl font-bold text-[#000000]"
-                        onClick={handleAddMonth}
-                    >
-                        Add month
-                    </button>
-                    <button
-                        className="cursor-pointer rounded-lg border-2 border-[#EEEEEE] px-8 py-3 text-xl font-bold"
-                        onClick={handleReset}
-                    >
-                        Reset
-                    </button>
-                </div>
+                <Controls
+                    onAddSeat={handleAddSeat}
+                    onAddMonth={handleAddMonth}
+                    onReset={handleReset}
+                />
             </div>
 
             <main className="grid grid-cols-3 gap-8 px-20 pt-10">
